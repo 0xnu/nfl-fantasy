@@ -1,3 +1,5 @@
+import csv
+import sys
 import urllib2
 import subprocess
 from bs4 import BeautifulSoup
