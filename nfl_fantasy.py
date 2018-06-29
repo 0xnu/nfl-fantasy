@@ -45,12 +45,26 @@ fantpos = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_p
 ages = [th.text for th in tbody.find_all('th', attrs={"data-stat": "age"})]
 g = [th.text for th in tbody.find_all('th', attrs={"data-stat": "g"})]
 gs = [th.text for th in tbody.find_all('th', attrs={"data-stat": "gs"})]
+comp = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_cmp"})]
+att = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_att"})]
+yds = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_yds"})]
+td = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_td"})]
+intn = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_int"})]
+attn = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rush_att"})]
+ydsn = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rush_yds"})]
+rushtd = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rush_td"})]
+tgt = [th.text for th in tbody.find_all('th', attrs={"data-stat": "targets"})]
+rect = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rec"})]
+rectyds = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rec_yds"})]
+rectdds = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rec_td"})]
+dkpts = [th.text for th in tbody.find_all('th', attrs={"data-stat": "draftkings_points"})]
+fdpts = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fanduel_points"})]
 blank = " "
 
 # print date
 # print players fantasy stats
 
-row1 = zip(player,posrank,ovrank,tm,fantpos,ages,g,gs,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank)
+row1 = zip(player,posrank,ovrank,tm,fantpos,ages,g,gs,comp,att,yds,td,intn,attn,ydsn,rushtd,tgt,rect,rectyds,rectdds,dkpts,fdpts,fdpts)
 rows = zip(name,position_ranking,overall_ranking,team,position,age,games_played,games_started,passes_completed,passes_attempted,passing_yards,passing_touchdowns,interceptions,rushing_attempts,rushing_yards,rushing_touchdowns,pass_targets,receptions,receiving_yards,receiving_touchdowns,fantasy_points,draftkings_points,fanduel_points)
 
 with open('nfl_fantasy.csv', 'wb') as f:
