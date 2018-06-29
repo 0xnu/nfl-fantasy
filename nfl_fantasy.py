@@ -13,7 +13,7 @@ page = urllib2.urlopen(url)
 soup = BeautifulSoup(page, 'html.parser')
 tbody = soup.find('tbody')
 fantasytable = soup.find(id="all_fantasy")
-date = [li.text for li in fantasytable.find_all('li')]
+fantasy_rankings = [h2.text for h2 in fantasytable.find_all('h2')]
 name = [td.text for td in tbody.find_all('td', attrs={"data-stat": "player"})]
 position_ranking = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fantasy_rank_pos"})]
 overall_ranking = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fantasy_rank_overall"})]
@@ -42,7 +42,7 @@ blank = " "
 # print date
 # print players fantasy stats
 
-row1 = zip(date,blank,blank,blank,blank,blank)
+row1 = zip(fantasy_rankings,blank,blank,blank,blank,blank)
 rows = zip(name,position_ranking,overall_ranking,team,position,age,games_played,games_started,passes_completed,passes_attempted,passing_yards,passing_touchdowns,interceptions,rushing_attempts,rushing_yards,rushing_touchdowns,pass_targets,receptions,receiving_yards,receiving_touchdowns,fantasy_points,draftkings_points,fanduel_points)
 
 with open('nfl_fantasy.csv', 'wb') as f:
