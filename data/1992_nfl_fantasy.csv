@@ -1,4 +1,4 @@
- ,PosRank,OvRank,Tm,FantPos,Age,G,GS,Cmp,Att,Yds,-0.8,Int,Att,Yds,TD,Tgt,Rec,Yds,TD,FantPt,DKPt,FDPt
+ ,PosRank,OvRank,Tm,FantPos,Age,G,GS,Cmp,Att,Yds,TD,Int,Att,Yds,TD,Tgt,Rec,Yds,TD,FantPt,DKPt,FDPt
 Emmitt Smith*+,1,1,DAL,RB,23,16,16,0,0,0,0,0,373,1713,18,74,59,335,1,319,381.8,344.3
 Thurman Thomas*,2,2,BUF,RB,26,16,16,0,0,0,0,0,312,1487,9,87,58,626,3,283,344.3,306.3
 Barry Foster*+,3,3,PIT,RB,24,16,15,0,1,0,0,0,390,1690,11,50,36,344,0,269,306.9,278.4
