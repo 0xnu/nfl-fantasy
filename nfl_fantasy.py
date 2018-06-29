@@ -39,12 +39,14 @@ draftkings_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": 
 fanduel_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fanduel_points"})]
 player = " "
 posrank = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_rank_pos"})]
+ovrank = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_rank_overall"})]
+tm = [th.text for th in tbody.find_all('th', attrs={"data-stat": "team"})]
 blank = " "
 
 # print date
 # print players fantasy stats
 
-row1 = zip(player,posrank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank)
+row1 = zip(player,posrank,ovrank,tm,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank,blank)
 rows = zip(name,position_ranking,overall_ranking,team,position,age,games_played,games_started,passes_completed,passes_attempted,passing_yards,passing_touchdowns,interceptions,rushing_attempts,rushing_yards,rushing_touchdowns,pass_targets,receptions,receiving_yards,receiving_touchdowns,fantasy_points,draftkings_points,fanduel_points)
 
 with open('nfl_fantasy.csv', 'wb') as f:
