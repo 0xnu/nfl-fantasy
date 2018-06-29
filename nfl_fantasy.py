@@ -2,9 +2,8 @@ import csv
 import sys
 import urllib2
 import subprocess
-from bs4 import BeautifulSoup
 from datetime import datetime
-import csv
+from bs4 import BeautifulSoup
 
 url = ('https://www.pro-football-reference.com/years/2017/fantasy.htm')
 
