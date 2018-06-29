@@ -68,7 +68,7 @@ blank = " "
 # print date
 # print players fantasy stats
 
-row1 = zip(player,posrank,ovrank,tm,fantpos,ages,g,gs,comp,att,yds,td,intn,attn,ydsn,rushtd,tgt,rect,rectyds,rectdds,dkpts,fdpts,fdpts)
+row1 = zip(player,posrank,ovrank,tm,fantpos,ages,g,gs,comp,att,yds,td,intn,attn,ydsn,rushtd,tgt,rect,rectyds,rectdds,fantpt,dkpts,fdpts)
 rows = zip(name,position_ranking,overall_ranking,team,position,age,games_played,games_started,passes_completed,passes_attempted,passing_yards,passing_touchdowns,interceptions,rushing_attempts,rushing_yards,rushing_touchdowns,pass_targets,receptions,receiving_yards,receiving_touchdowns,fantasy_points,draftkings_points,fanduel_points)
 
 with open('nfl_fantasy.csv', 'wb') as f:
