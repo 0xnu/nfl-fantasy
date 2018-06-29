@@ -37,7 +37,7 @@ receiving_touchdowns = [td.text for td in tbody.find_all('td', attrs={"data-stat
 fantasy_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fantasy_points"})]
 draftkings_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": "draftkings_points"})]
 fanduel_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fanduel_points"})]
-player = "player"
+player = "Player"
 blank = " "
 
 # print date
