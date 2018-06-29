@@ -65,7 +65,7 @@ draftkings_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": 
 fanduel_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fanduel_points"})]
 blank = " "
 
-# print date
+# print title
 # print players fantasy stats
 
 row1 = zip(player,posrank,ovrank,tm,fantpos,ages,g,gs,comp,att,yds,td,intn,attn,ydsn,rushtd,tgt,rect,rectyds,rectdds,fantpt,dkpts,fdpts)
