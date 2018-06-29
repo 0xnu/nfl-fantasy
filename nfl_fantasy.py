@@ -13,7 +13,33 @@ page = urllib2.urlopen(url)
 soup = BeautifulSoup(page, 'html.parser')
 tbody = soup.find('tbody')
 fantasytable = soup.find(id="all_fantasy")
-#fantasy_rankings = [h2.text for h2 in fantasytable.find_all('h2')]
+
+# title
+player = " "
+posrank = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_rank_pos"})]
+ovrank = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_rank_overall"})]
+tm = [th.text for th in tbody.find_all('th', attrs={"data-stat": "team"})]
+fantpos = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_pos"})]
+ages = [th.text for th in tbody.find_all('th', attrs={"data-stat": "age"})]
+g = [th.text for th in tbody.find_all('th', attrs={"data-stat": "g"})]
+gs = [th.text for th in tbody.find_all('th', attrs={"data-stat": "gs"})]
+comp = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_cmp"})]
+att = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_att"})]
+yds = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_yds"})]
+td = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_td"})]
+intn = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_int"})]
+attn = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rush_att"})]
+ydsn = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rush_yds"})]
+rushtd = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rush_td"})]
+tgt = [th.text for th in tbody.find_all('th', attrs={"data-stat": "targets"})]
+rect = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rec"})]
+rectyds = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rec_yds"})]
+rectdds = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rec_td"})]
+fantpt = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_points"})]
+dkpts = [th.text for th in tbody.find_all('th', attrs={"data-stat": "draftkings_points"})]
+fdpts = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fanduel_points"})]
+
+# stats
 name = [td.text for td in tbody.find_all('td', attrs={"data-stat": "player"})]
 position_ranking = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fantasy_rank_pos"})]
 overall_ranking = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fantasy_rank_overall"})]
@@ -37,28 +63,6 @@ receiving_touchdowns = [td.text for td in tbody.find_all('td', attrs={"data-stat
 fantasy_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fantasy_points"})]
 draftkings_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": "draftkings_points"})]
 fanduel_points = [td.text for td in tbody.find_all('td', attrs={"data-stat": "fanduel_points"})]
-player = " "
-posrank = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_rank_pos"})]
-ovrank = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_rank_overall"})]
-tm = [th.text for th in tbody.find_all('th', attrs={"data-stat": "team"})]
-fantpos = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fantasy_pos"})]
-ages = [th.text for th in tbody.find_all('th', attrs={"data-stat": "age"})]
-g = [th.text for th in tbody.find_all('th', attrs={"data-stat": "g"})]
-gs = [th.text for th in tbody.find_all('th', attrs={"data-stat": "gs"})]
-comp = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_cmp"})]
-att = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_att"})]
-yds = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_yds"})]
-td = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_td"})]
-intn = [th.text for th in tbody.find_all('th', attrs={"data-stat": "pass_int"})]
-attn = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rush_att"})]
-ydsn = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rush_yds"})]
-rushtd = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rush_td"})]
-tgt = [th.text for th in tbody.find_all('th', attrs={"data-stat": "targets"})]
-rect = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rec"})]
-rectyds = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rec_yds"})]
-rectdds = [th.text for th in tbody.find_all('th', attrs={"data-stat": "rec_td"})]
-dkpts = [th.text for th in tbody.find_all('th', attrs={"data-stat": "draftkings_points"})]
-fdpts = [th.text for th in tbody.find_all('th', attrs={"data-stat": "fanduel_points"})]
 blank = " "
 
 # print date
