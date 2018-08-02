@@ -2,6 +2,14 @@ NFL Fantasy Stat
 =============
 Scrape www.pro-football-reference.com for pro football fantasy stats.
 
+Install Requirements
+------------
+
+Python 3 is required to the scraper. Install the project's dependencies
+with::
+
+    pip3 install -r requirements.txt
+
 Running
 -------
 

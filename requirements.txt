@@ -1,0 +1,4 @@
+subprocess32==3.5.2
+beautifulsoup4==4.6.1
+DateTime==4.2
+json-encoder==1.0.0
