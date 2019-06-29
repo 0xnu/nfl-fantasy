@@ -21,7 +21,3 @@ python3 nfl_fantasy.py
 ## Got issues or questions?
 
 :sunglasses: :wave: [Email Me](mailto:oketunjifinbarrs@gmail.com)
-
-## License
-
-MIT
