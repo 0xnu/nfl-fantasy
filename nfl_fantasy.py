@@ -78,7 +78,7 @@ blank = " "
 row1 = zip(player,posrank,ovrank,tm,fantpos,ages,g,gs,comp,att,yds,td,intn,attn,ydsn,rushtd,tgt,rect,rectyds,rectdds,fantpt,dkpts,fdpts)
 rows = zip(name,position_ranking,overall_ranking,team,position,age,games_played,games_started,passes_completed,passes_attempted,passing_yards,passing_touchdowns,interceptions,rushing_attempts,rushing_yards,rushing_touchdowns,pass_targets,receptions,receiving_yards,receiving_touchdowns,fantasy_points,draftkings_points,fanduel_points)
 
-with open('./data/2017_nfl_fantasy.csv', 'w') as f:
+with open('./data/2018_nfl_fantasy.csv', 'w') as f:
 	writer = csv.writer(f)
 	for row in row1:
 		writer.writerow(row)
@@ -104,7 +104,7 @@ with open("log.txt", 'a') as f:
 	f.write(today + " - " + str(total) + "\n")
 
 git_add("log.txt")
-git_add("./data/2017_nfl_fantasy.csv")
+git_add("./data/2018_nfl_fantasy.csv")
 git_add("nfl_fantasy.py")
 git_commit("nfl_fantasy")
 git_push()
