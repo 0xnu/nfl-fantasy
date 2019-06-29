@@ -1,29 +1,27 @@
-NFL Fantasy Stat
-=============
+# NFL Fantasy Stat [![Build Status](https://travis-ci.org/0xnu/nfl-fantasy.svg?branch=master)](https://travis-ci.org/0xnu/nfl-fantasy)
+
 Scrape www.pro-football-reference.com for pro football fantasy stats.
 
-Install Requirements
-------------
+## Install Requirements
 
-Python 3 is required to the scraper. Install the project's dependencies
-with::
+Python 3 is required to the scraper. Install the project's dependencies with:
 
-    pip3 install -r requirements.txt
+```shell
+pip3 install -r requirements.txt
+```
 
-Running
--------
+## Running
 
-Run the scraper::
+Run the scraper:
 
-    python3 nfl_fantasy.py
+```shell
+python3 nfl_fantasy.py
+```
 
-Got issues or questions?
--------
+## Got issues or questions?
 
-:wave: [Email Me](mailto:oketunjifinbarrs@gmail.com)
-:panda_face:
+:sunglasses: :wave: [Email Me](mailto:oketunjifinbarrs@gmail.com)
 
-License 
--------
+## License
 
-    MIT
+MIT
