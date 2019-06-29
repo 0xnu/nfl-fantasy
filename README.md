@@ -4,7 +4,7 @@ Scrape www.pro-football-reference.com for pro football fantasy stats.
 
 ## Install Requirements
 
-Python 3 is required to the scraper. Install the project's dependencies with:
+Python 3 is required to scrape data. Install the project's dependencies with:
 
 ```shell
 pip3 install -r requirements.txt

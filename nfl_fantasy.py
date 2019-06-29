@@ -12,7 +12,7 @@ import subprocess
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-url = ('https://www.pro-football-reference.com/years/2017/fantasy.htm')
+url = ('https://www.pro-football-reference.com/years/2018/fantasy.htm')
 
 # page = urllib2.urlopen(url)
 page = urlopen(url)
