@@ -89,7 +89,7 @@ def git_add(file):
     subprocess.call(["git", "add", file])
 
 def git_commit(message):
-    subprocess.call(["git", "commit", "-m", "nfl fantasy stats"])
+    subprocess.call(["git", "commit", "-S", "-m", "nfl fantasy stats"])
 
 def git_push():
     subprocess.call(["git", "push", "origin", "master"])
