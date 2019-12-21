@@ -12,7 +12,7 @@ import subprocess
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-url = ('https://www.pro-football-reference.com/years/2019/fantasy.htm')
+url = ('https://www.pro-football-reference.com/years/2018/fantasy.htm')
 
 # page = urllib2.urlopen(url)
 page = urlopen(url)
@@ -104,7 +104,7 @@ with open("log.txt", 'a') as f:
 	f.write(today + " - " + str(total) + "\n")
 
 git_add("log.txt")
-git_add("./data/2019_nfl_fantasy.csv")
+git_add("./data/2018_nfl_fantasy.csv")
 git_add("nfl_fantasy.py")
 git_commit("nfl_fantasy")
 git_push()
