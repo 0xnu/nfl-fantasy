@@ -15,7 +15,7 @@ pip3 install -r requirements.txt
 Run the scraper:
 
 ```shell
-python3 nfl_fantasy.py
+chmod +x run.sh && ./run.sh
 ```
 
 ## Got issues or questions?
