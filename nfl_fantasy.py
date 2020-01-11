@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import csv
 import sys
 # import urllib2
@@ -84,15 +87,6 @@ with open('./data/2019_nfl_fantasy.csv', 'w') as f:
 	for row in rows:
 		writer.writerow(row)
 
-def git_add(file):
-    subprocess.call(["git", "add", file])
-
-def git_commit(message):
-    subprocess.call(["git", "commit", "-S", "-m", "nfl fantasy stats"])
-
-def git_push():
-    subprocess.call(["git", "push", "origin", "master"])
-
 if __name__ == "__main__":
     start = datetime.now()
 
@@ -101,11 +95,5 @@ today = datetime.strftime(datetime.now(), '%Y-%m-%d \t %H:%M')
 total = datetime.now() - start
 with open("log.txt", 'a') as f:
 	f.write(today + " - " + str(total) + "\n")
-
-git_add("log.txt")
-git_add("./data/2019_nfl_fantasy.csv")
-git_add("nfl_fantasy.py")
-git_commit("nfl_fantasy")
-git_push()
 
 sys.exit(0)
