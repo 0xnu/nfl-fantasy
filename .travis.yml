@@ -7,3 +7,6 @@ install:
 # run command
 script:
   - python3 nfl_fantasy.py
+
+after_success:
+  - coveralls
